@@ -25,6 +25,26 @@ const createUser = async (req, res) => {
         }
     }) 
 };
+const updateUser = async (req, res) => {
+    const id = parseInt(req.params.id);
+    const { nombre, edad, email } = req.body;
+
+    const response =await pool.query('UPDATE usuarios SET nombre = $1, edad = $2, email = $3 WHERE id = $4', [
+        nombre,
+        edad,
+        email,
+        id
+    ]);
+    res.json('usuario actualizado correctamente');
+};
+
+const deleteUser = async (req, res) => {
+    const id = parseInt(req.params.id);
+    await pool.query('DELETE FROM usuarios where id = $1', [
+        id
+    ]);
+    res.json(`Usuario ${id} eleminado correctamente`);
+};
 
 
 const getUsersPromedioEdad = async (req, res) => {
@@ -47,6 +67,8 @@ const getStatus = (req, res) =>{
 module.exports = {
     getUsers,
     createUser,
+    updateUser,
+    deleteUser,
     getUsersPromedioEdad,
     getStatus
 }
