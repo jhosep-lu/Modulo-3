@@ -6,7 +6,9 @@ Este API REST permite a los usuarios realizar operaciones Crear, Leer, en una ba
 Requisitos
 
 •	Node.js
+
 •	Una base de datos :  Postgresql
+
 •	Postman o una herramienta similar para realizar peticiones HTTP
 
 Instalación
