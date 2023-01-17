@@ -21,11 +21,9 @@ Instalación
 
 Endpoints
 
-•	GET /usuarios: Obtiene una lista de todos los usuarios en la base de datos.
-
-•	GET /status:: Obtiene la  información del api-rest
-
-•	POST /usuario: Crea un nuevo usuario en la base de datos.
-
-•	GET/usuarios/promedio-edad: Obtiene el promedio de las edades de todos los usuarios
-
+-	GET /usuarios: Obtiene una lista de todos los usuarios en la base de datos.
+-	GET /status: Obtiene la información del api-rest
+-	POST /usuario: Crea un nuevo usuario en la base de datos.
+-	PUT/usuario/:id : Actualiza los datos de un usuario en base al id.
+-	DELETE/usuario/:id : Elimina un usuario en base al id.
+-	GET/usuarios/promedio-edad: Obtiene el promedio de las edades de todos los usuarios.
